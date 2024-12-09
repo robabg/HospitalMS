@@ -158,9 +158,8 @@ namespace HospitalManagmentSystem
         private void btn_login_Click(object sender, EventArgs e)
         {
             // Add login logic here
+            ConnectionManager cm = new ConnectionManager();
             try {
-                string mysqlconn = "server=127.0.0.1;user=root;database=hospitalms;password=";
-                MySqlConnection mySql = new MySqlConnection(mysqlconn);
 
                 string username = txt_user.Text.ToString();
                 string password = txt_password.Text.ToString();
@@ -171,8 +170,8 @@ namespace HospitalManagmentSystem
                 }
                 else
                 {
-                    mySql.Open();
-                    MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM  admin", mySql);
+                    cm.mySql.Open();
+                    MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM  admin", cm.mySql);
                     MySqlDataReader read = mySqlCommand.ExecuteReader();
                     while (read.Read())
                     {
@@ -185,7 +184,7 @@ namespace HospitalManagmentSystem
                             MessageBox.Show("Invalide Login");
                         }
                     }
-                    mySql.Close();
+                    cm.mySql.Close();
                 }
 
             }
