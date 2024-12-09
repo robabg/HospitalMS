@@ -16,5 +16,5 @@ namespace HospitalManagmentSystem
             mySql = new MySqlConnection(mysqlconn);
         }
     }
-    //hi i was here
+    //hi i was here No you aint 
 }
