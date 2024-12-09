@@ -36,5 +36,15 @@ namespace HospitalManagmentSystem
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterUsers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            txt_firstName = new TextBox();
             txt_lastName = new TextBox();
             txt_email = new TextBox();
             txt_password = new TextBox();
@@ -45,17 +43,9 @@
             btn_register = new Button();
             btn_clearRigster = new Button();
             btn_editRegister = new Button();
+            label1 = new Label();
+            txt_firstName = new TextBox();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(72, 75);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 21);
-            label1.TabIndex = 0;
-            label1.Text = "First Name";
             // 
             // label2
             // 
@@ -101,29 +91,22 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(82, 344);
+            label6.Location = new Point(83, 344);
             label6.Name = "label6";
             label6.Size = new Size(82, 21);
             label6.TabIndex = 5;
             label6.Text = "Password";
+            label6.Click += label6_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(16, 398);
+            label7.Location = new Point(66, 400);
             label7.Name = "label7";
-            label7.Size = new Size(148, 21);
+            label7.Size = new Size(98, 21);
             label7.TabIndex = 6;
-            label7.Text = "Confirm Password";
-            // 
-            // txt_firstName
-            // 
-            txt_firstName.Location = new Point(203, 77);
-            txt_firstName.MaxLength = 25;
-            txt_firstName.Name = "txt_firstName";
-            txt_firstName.Size = new Size(263, 23);
-            txt_firstName.TabIndex = 7;
+            label7.Text = "Occupation";
             // 
             // txt_lastName
             // 
@@ -146,6 +129,7 @@
             // 
             txt_password.Location = new Point(203, 342);
             txt_password.Name = "txt_password";
+            txt_password.PasswordChar = '*';
             txt_password.Size = new Size(263, 23);
             txt_password.TabIndex = 12;
             // 
@@ -202,6 +186,24 @@
             btn_editRegister.Text = "Edit";
             btn_editRegister.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(72, 75);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 21);
+            label1.TabIndex = 0;
+            label1.Text = "First Name";
+            // 
+            // txt_firstName
+            // 
+            txt_firstName.Location = new Point(203, 77);
+            txt_firstName.MaxLength = 25;
+            txt_firstName.Name = "txt_firstName";
+            txt_firstName.Size = new Size(263, 23);
+            txt_firstName.TabIndex = 7;
+            // 
             // RegisterUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -228,20 +230,18 @@
             Name = "RegisterUsers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegisterUsers";
+            Load += RegisterUsers_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox txt_firstName;
         private TextBox txt_lastName;
         private TextBox txt_email;
         private TextBox txt_password;
@@ -251,5 +251,7 @@
         private Button btn_register;
         private Button btn_clearRigster;
         private Button btn_editRegister;
+        private Label label1;
+        private TextBox txt_firstName;
     }
 }
