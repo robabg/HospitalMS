@@ -16,5 +16,18 @@ namespace HospitalManagmentSystem
         {
             InitializeComponent();
         }
+
+        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterUsers registerUsers = new RegisterUsers();
+            registerUsers.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Close();
+        }
     }
 }

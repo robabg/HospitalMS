@@ -37,7 +37,6 @@
             txt_lastName = new TextBox();
             txt_email = new TextBox();
             txt_password = new TextBox();
-            txt_confirmPassword = new TextBox();
             cmb_gender = new ComboBox();
             birthDate = new DateTimePicker();
             btn_register = new Button();
@@ -45,6 +44,7 @@
             btn_editRegister = new Button();
             label1 = new Label();
             txt_firstName = new TextBox();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // label2
@@ -133,20 +133,13 @@
             txt_password.Size = new Size(263, 23);
             txt_password.TabIndex = 12;
             // 
-            // txt_confirmPassword
-            // 
-            txt_confirmPassword.Location = new Point(203, 400);
-            txt_confirmPassword.Name = "txt_confirmPassword";
-            txt_confirmPassword.Size = new Size(263, 23);
-            txt_confirmPassword.TabIndex = 13;
-            // 
             // cmb_gender
             // 
             cmb_gender.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_gender.FormattingEnabled = true;
             cmb_gender.Location = new Point(203, 178);
             cmb_gender.Name = "cmb_gender";
-            cmb_gender.Size = new Size(165, 23);
+            cmb_gender.Size = new Size(263, 23);
             cmb_gender.TabIndex = 15;
             // 
             // birthDate
@@ -155,7 +148,7 @@
             birthDate.Format = DateTimePickerFormat.Custom;
             birthDate.Location = new Point(203, 223);
             birthDate.Name = "birthDate";
-            birthDate.Size = new Size(200, 23);
+            birthDate.Size = new Size(263, 23);
             birthDate.TabIndex = 16;
             // 
             // btn_register
@@ -204,18 +197,28 @@
             txt_firstName.Size = new Size(263, 23);
             txt_firstName.TabIndex = 7;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Barte", "brook" });
+            comboBox1.Location = new Point(203, 398);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(263, 23);
+            comboBox1.TabIndex = 20;
+            // 
             // RegisterUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(544, 642);
+            Controls.Add(comboBox1);
             Controls.Add(btn_editRegister);
             Controls.Add(btn_clearRigster);
             Controls.Add(btn_register);
             Controls.Add(birthDate);
             Controls.Add(cmb_gender);
-            Controls.Add(txt_confirmPassword);
             Controls.Add(txt_password);
             Controls.Add(txt_email);
             Controls.Add(txt_lastName);
@@ -245,7 +248,6 @@
         private TextBox txt_lastName;
         private TextBox txt_email;
         private TextBox txt_password;
-        private TextBox txt_confirmPassword;
         private ComboBox cmb_gender;
         private DateTimePicker birthDate;
         private Button btn_register;
@@ -253,5 +255,6 @@
         private Button btn_editRegister;
         private Label label1;
         private TextBox txt_firstName;
+        private ComboBox comboBox1;
     }
 }
